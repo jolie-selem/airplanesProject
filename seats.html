@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Seats</title>
+    <link rel="stylesheet" href="all.min.css">
+    <link rel="stylesheet" href="seats.css">
+</head>
+
+<body>
+    <header class="seats_header">
+        <nav class="pages_nav">
+            <div class="container">
+                <div class="pages_logo">
+                    <div class="nav_logo">
+                        <img src="logo1-removebg-preview.png" id="nav_logo_img" alt="">
+                    </div>
+                    <div class="pages_themes">
+                        <i class="fa-solid fa-moon" id="themeToggle"></i>
+                    </div>
+                </div>
+                <div class="pages_ul">
+                    <ul>
+                        <li><a href="index.html">home</a></li>
+                        <li><a href="packages.html"> packages</a></li>
+                        <li><a href="dates.html"> dates</a></li>
+                        <li><a href="flights.html">flights</a></li>
+                        <li><a href="hotels.html">hotels</a></li>
+                        <li><a href="login.html">log in</a></li>
+                        <li><a href="signup.html">register</a></li>
+                        <li><a href="profile.html">profile</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <main class="main-content">
+            <div style="width: 1100px;">
+                <div class="flights_nav">
+                    <div>1 Choose Flight</div>
+                    <div>2 Flight information</div>
+                    <div class="active-step">3 Select Seat</div>
+                    <div>4 Your Ticket</div>
+                </div>
+
+                <div class="container">
+                    <div class="booking_card">
+                        <div class="plane-section">
+
+                            <div class="seats_type">
+                                <div class="seat_type economy active" onclick="setClass('economy')">Economy</div>
+                                <div class="seat_type business" onclick="setClass('business')">Business</div>
+                                <div class="seat_type first" onclick="setClass('first')">First</div>
+                            </div>
+
+                            <div class="seat_table_div">
+                                <table class="seat_table">
+                                    <thead>
+                                        <tr>
+                                            <th>Row</th>
+                                            <th>A</th>
+                                            <th>B</th>
+                                            <th>C</th>
+                                            <th>D</th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody id="seatMap">
+
+                                        <!-- ROWS -->
+                                        <tr>
+                                            <td class="row-label">1</td>
+                                            <td><button class="seat">1A</button></td>
+                                            <td><button class="seat">1B</button></td>
+                                            <td><button class="seat">1C</button></td>
+                                            <td><button class="seat">1D</button></td>
+                                        </tr>
+
+                                        <tr>
+                                            <td class="row-label">2</td>
+                                            <td><button class="seat">2A</button></td>
+                                            <td><button class="seat">2B</button></td>
+                                            <td><button class="seat">2C</button></td>
+                                            <td><button class="seat booked" disabled>2D</button></td>
+                                        </tr>
+
+                                        <tr>
+                                            <td class="row-label">3</td>
+                                            <td><button class="seat booked" disabled>3A</button></td>
+                                            <td><button class="seat">3B</button></td>
+                                            <td><button class="seat">3C</button></td>
+                                            <td><button class="seat">3D</button></td>
+                                        </tr>
+
+                                        <tr>
+                                            <td class="row-label">4</td>
+                                            <td><button class="seat">4A</button></td>
+                                            <td><button class="seat booked" disabled>4B</button></td>
+                                            <td><button class="seat booked" disabled>4C</button></td>
+                                            <td><button class="seat">4D</button></td>
+                                        </tr>
+
+                                        <tr>
+                                            <td class="row-label">5</td>
+                                            <td><button class="seat booked" disabled>5A</button></td>
+                                            <td><button class="seat">5B</button></td>
+                                            <td><button class="seat booked" disabled>5C</button></td>
+                                            <td><button class="seat">5D</button></td>
+                                        </tr>
+
+                                        <tr>
+                                            <td class="row-label">6</td>
+                                            <td><button class="seat">6A</button></td>
+                                            <td><button class="seat">6B</button></td>
+                                            <td><button class="seat">6C</button></td>
+                                            <td><button class="seat">6D</button></td>
+                                        </tr>
+
+                                        <tr>
+                                            <td class="row-label">7</td>
+                                            <td><button class="seat">7A</button></td>
+                                            <td><button class="seat">7B</button></td>
+                                            <td><button class="seat">7C</button></td>
+                                            <td><button class="seat">7D</button></td>
+                                        </tr>
+
+                                        <tr>
+                                            <td class="row-label">8</td>
+                                            <td><button class="seat booked" disabled>8A</button></td>
+                                            <td><button class="seat">8B</button></td>
+                                            <td><button class="seat">8C</button></td>
+                                            <td><button class="seat">8D</button></td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="seats_content">
+                            <div class="selection-info">
+                                <h3>Your Selection</h3>
+                                <div id="selectedSeatDisplay" class="seat-badge">None</div>
+                            </div>
+
+                            <div class="next_data">
+                                <h3>What’s next?</h3>
+                                <p>Complete your trip by booking a hotel or get your tickets directly.</p>
+                                <button class="btn_home" onclick="goHotels()">🏨 Book Hotel</button>
+                                <button class="btn_tickets" onclick="goTickets()">🎫 Get Tickets</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="pages_footer">
+            <div class="container">
+                <div class="footer_border">
+                    <div class="pages_logo">
+                        <div class="footer_logo"> <img src="logo1-removebg-preview.png" id="footer_logo_img"
+                                alt=""> </div>
+                        <p>We are a team dedicated to building this website about aviation and aircraft. <br> <span> Our
+                                Team</span> </p>
+                    </div>
+                    <div class="footer_about">
+                        <h3>About</h3>
+                        <div class="links_list"> <img src="imgmap.jpeg" usemap="#myMap"> <map name="myMap"
+                                style="background-color: black;"> <area shape="rect" coords="80,0,500,30"
+                                    href="flights.html"> <area shape="rect" coords="60,40,115,60" href="hotels.html">
+                                <area shape="rect" coords="60,60,115,80" href="dates.html"> <area shape="rect"
+                                    coords="0,20,65,50" href="packages.html"> </map> </div>
+                    </div>
+                    <div class="footer_contact">
+                        <h3>Contact</h3>
+                        <div class="footer_ul">
+                            <ul>
+                                <li><i class="fa-solid fa-location-dot"></i> Cairo International Airport</li>
+                                <li><i class="fa-solid fa-phone-flip"></i> Phone: +20 100 000 0000</li>
+                                <li><i class="fa-solid fa-envelope"></i> Email: info@airline.com</li>
+                                <li><i class="fa-brands fa-skype"></i> Skype: airline.support</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer_follow">
+                        <h3>Follow us</h3>
+                        <div class="footer_icons"> <i class="fa-brands fa-facebook"></i> <i
+                                class="fa-brands fa-twitter"></i> <i class="fa-brands fa-google-plus-g"></i> <i
+                                class="fa-brands fa-instagram"></i> <i class="fa-brands fa-pinterest"></i> </div>
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d61963477.1935999!2d-5.666757554845085!3d18.576269695502308!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sar!2seg!4v1777892214208!5m2!1sar!2seg"
+                            width="150" height="100" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="license">
+                <p>&copy2026 Designed by <a href="#">AirPlanes Team</a> - <a href="#">Final Project</a></p>
+            </div>
+        </footer>
+
+        <script src="seats.js"></script>
+</body>
+
+</html>

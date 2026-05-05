@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Details - Confirm Your Trip</title>
+    <link rel="stylesheet" href="all.min.css">
+    <link rel="stylesheet" href="select-flight.css">
+</head>
+<body>
+    <header class="selectFlight_header">
+        <nav class="pages_nav">
+            <div class="container">
+                <div class="pages_logo">
+                    <div class="nav_logo">
+                        <img src="logo1-removebg-preview.png" id="nav_logo_img" alt="">
+                    </div>
+                    <div class="pages_themes">
+                        <i class="fa-solid fa-moon" id="themeToggle"></i>
+                    </div>
+                </div>
+                <div class="pages_ul">
+                    <ul>
+                        <li><a href="index.html">home</a></li>
+                        <li><a href="packages.html"> packages</a></li>
+                        <li><a href="dates.html"> dates</a></li>
+                        <li><a href="flights.html">flights</a></li>
+                        <li><a href="hotels.html">hotels</a></li>
+                        <li><a href="login.html">log in</a></li>
+                        <li><a href="signup.html">register</a></li>
+                        <li><a href="profile.html">profile</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="main-content">
+        <div style="width: 1100px;">
+            <!-- Steps -->
+            <div class="flights_nav">
+                <div>1 Choose Flight</div>
+                <div class="active-step">2 Flight information</div>
+                <div>3 Select Seat</div>
+                <div>4 Your Ticket</div>
+            </div>
+
+            <div class="flight_details_card">
+                <div class="image-side">
+                    <h2 id="routeTitle">Loading route</h2>
+                    <img id="flightImage" src="american.jpg" alt="Flight Image">
+                    <div class="time-footer">
+                        <span><i class="fa-solid fa-plane-departure"></i> Dep: 10:00 AM</span>
+                        <span><i class="fa-solid fa-plane-arrival"></i> Arr: 02:00 PM</span>
+                    </div>
+                </div>
+                <div class="info-side">
+                    <h1 id="airlineName">Airline Name</h1>
+                    <div class="details" id="flightDetails">
+                    </div>
+                    <div class="bottom-group">
+                        <div class="price-box">
+                            <p>Total Price</p>
+                            <h2 id="price">$0</h2>
+                        </div>
+                        <button onclick="goToSeats()">Continue to Seats <i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="pages_footer">
+        <div class="container">
+            <div class="footer_border">
+                <div class="pages_logo">
+                    <div class="footer_logo">
+                        <img src="logo1-removebg-preview.png" id="footer_logo_img" alt="">
+                    </div>
+                    <p>We are a team dedicated to building this website about aviation and aircraft. <br>
+                        <span> Our Team</span>
+                    </p>
+                </div>
+
+                <div class="footer_about">
+                    <h3>About</h3>
+                    <div class="links_list">
+                        <img src="imgmap.jpeg" usemap="#myMap">
+
+                        <map name="myMap" style="background-color: black;">
+                            <area shape="rect" coords="80,0,500,30" href="flights.html">
+                            <area shape="rect" coords="60,40,115,60" href="hotels.html">
+                            <area shape="rect" coords="60,60,115,80" href="dates.html">
+                            <area shape="rect" coords="0,20,65,50" href="packages.html">
+                        </map>
+                    </div>
+                </div>
+                <div class="footer_contact">
+                    <h3>Contact</h3>
+                    <div class="footer_ul">
+                        <ul>
+                            <li><i class="fa-solid fa-location-dot"></i> Cairo International Airport</li>
+                            <li><i class="fa-solid fa-phone-flip"></i> Phone: +20 100 000 0000</li>
+                            <li><i class="fa-solid fa-envelope"></i> Email: info@airline.com</li>
+                            <li><i class="fa-brands fa-skype"></i> Skype: airline.support</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer_follow">
+                    <h3>Follow us</h3>
+                    <div class="footer_icons">
+                        <i class="fa-brands fa-facebook"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-brands fa-google-plus-g"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                        <i class="fa-brands fa-pinterest"></i>
+                    </div>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d61963477.1935999!2d-5.666757554845085!3d18.576269695502308!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sar!2seg!4v1777892214208!5m2!1sar!2seg"
+                        width="150" height="100" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="license">
+           <p>&copy2026 Designed by <a href="#">AirPlanes Team</a> - <a href="#">Final Project</a></p>
+        </div>
+    </footer>
+    <script src="select-flight.js"></script>
+</body>
+
+</html>

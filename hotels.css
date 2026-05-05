@@ -1,0 +1,436 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #1e293b;
+    background: #f8fafc;
+}
+
+.hotels_header .pages_nav {
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    height: 80px;
+}
+
+.hotels_header .pages_nav .container {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.hotels_header .pages_nav .container .pages_ul {
+    display: flex;
+    justify-content: space-around;
+    width: 70%;
+
+}
+
+.hotels_header .pages_nav .container .pages_ul ul {
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
+    list-style: none;
+}
+
+.hotels_header .pages_nav .container .pages_ul ul li a {
+    color: black;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all 0.5s;
+}
+
+.hotels_header .pages_nav .container .pages_ul ul li a:hover {
+    color: #740E15;
+
+}
+
+.hotels_header .pages_nav .container .pages_ul ul li {
+    transition: all 0.5s;
+}
+
+.hotels_header .pages_nav .container .pages_ul ul li:hover {
+    transform: scale(1.1);
+    transform: translateY(-3px);
+}
+
+.hotels_header .pages_nav .container .pages_logo {
+    width: 15%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 80px;
+}
+
+.hotels_header .pages_nav .container .pages_logo .nav_logo,
+.hotels_header .pages_nav .container .pages_logo .pages_themes {
+    width: 45%;
+}
+
+.packages_header .pages_nav .container .pages_logo .nav_logo {
+    height: 100%;
+}
+
+.hotels_header .pages_nav .container .pages_logo .nav_logo img {
+    width: 100%;
+}
+
+.hotels_header .pages_nav .container .pages_logo .pages_themes i {
+    padding: 5% 5%;
+    background: transparent;
+    color: black;
+    border-radius: 20%;
+}
+
+.main_hotel {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+
+.page {
+    margin-top: 10px;
+    animation: fadeIn 0.8s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#Hotel h2 {
+    font-size: 60px;
+    text-align: center;
+    margin-bottom: 60px;
+    font-weight: 800;
+}
+
+.countrySelect {
+    font-size: 18px;
+    margin-left: 10px;
+    color: white;
+}
+
+.filterCards {
+    margin-block: 20px;
+}
+
+.cards-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    row-gap: 50px;
+    gap: 32px;
+    margin-block: 32px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    overflow: hidden;
+     box-shadow:0 15px 30px rgba(5,5,5,5);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    padding: 10px;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 10px;
+    background: rgb(16, 123, 247);
+    z-index: 2;
+}
+
+.card:hover {
+    transform: translateY(-15px) scale(1.02);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+    border-color: rgb(5, 38, 128);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+    flex-shrink: 0;
+}
+
+.card:hover img {
+    transform: scale(1.08);
+}
+
+.card>div {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.card h3 {
+    font-weight: 700;
+    color: #1e293b;
+    line-height: 1.3;
+    display: flex;
+    overflow: hidden;
+    margin-top: 10px;
+    height: 60px;
+}
+
+.stars {
+    display: flex;
+    align-items: center;
+    flex-direction: row !important;
+}
+
+.stars i {
+    color: #fbbf24;
+    font-size: 1.1rem;
+    filter: drop-shadow(0 1px 2px rgba(251, 191, 36, 0.5));
+}
+
+.stars p {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.card p {
+    font-size: 1.1rem;
+    margin-block: 10px;
+    color: #0d1c31;
+    font-weight: 500;
+}
+
+.card p strong {
+    font-size: 1.4rem;
+    color: #010816;
+    font-weight: 800;
+}
+
+.card button {
+    width: 100%;
+    padding: 1.1rem 2rem;
+    background: #1e40af;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+}
+
+.card button:hover::before {
+    left: 100%;
+}
+
+.card button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgb(16, 123, 247);
+    background: rgb(5, 38, 128);
+}
+
+.card button:active {
+    transform: translateY(-1px);
+}
+
+.pages_footer .container {
+    width: 80%;
+    margin: auto;
+    height: 50vh;
+}
+
+.pages_footer .container .footer_border {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 100%;
+    align-content: center;
+    border-bottom: 1px solid black;
+}
+
+.pages_footer .container .footer_border .footer_about h3 {
+    margin-left: 15%;
+}
+
+.pages_footer .container .footer_border .pages_logo .footer_logo {
+    width: 50%;
+
+}
+
+.pages_footer .container .footer_border .pages_logo img {
+    width: 100%;
+}
+
+.pages_footer .container .footer_border .footer_contact ul {
+    list-style: none;
+}
+
+.pages_footer .container .footer_border .footer_contact,
+.pages_footer .container .footer_border .footer_follow,
+.footer_about,
+.pages_logo {
+    width: 20%;
+}
+
+.pages_footer .container .footer_border .footer_contact .footer_ul,
+.pages_footer .container .footer_border .footer_about .links_list,
+.pages_footer .container .footer_border .footer_follow .footer_icons {
+    margin-block: 5%;
+}
+
+.pages_footer .container .footer_border .footer_follow .footer_icons i {
+    transition: all 0.5s;
+}
+
+.pages_footer .container .footer_border .footer_follow .footer_icons i:hover {
+    color: #740E15;
+    cursor: pointer;
+}
+
+.pages_footer .container .footer_border .footer_about .links_list a,
+.pages_footer .container .footer_border .footer_contact .footer_ul li,
+.pages_footer .container .footer_border .pages_logo p {
+    line-height: 30px;
+}
+
+.pages_footer .container .footer_border .pages_logo p span {
+    border-bottom: 1px dashed #740E15;
+    color: #740E15;
+
+}
+
+.pages_footer .license {
+    padding-block: 30px;
+    text-align: center;
+
+}
+
+.pages_footer .license p {
+    color: #686565;
+    font-family: sans-serif;
+    font-size: 13px;
+
+}
+
+.pages_footer .license p a {
+    text-decoration: none;
+    transition: all 0.7s;
+}
+
+.pages_footer .license p a:hover {
+    color: #740E15;
+    text-decoration: underline;
+}
+
+.fa-moon {
+    cursor: pointer;
+    border: #121212 1px solid;
+}
+
+body.light {
+    background-color: #b4d3f9;
+    color: black;
+
+}
+
+body.light .license p a {
+    color: black;
+}
+
+body.light .pages_footer .container .footer_border {
+    border-bottom: 1px solid black;
+}
+
+body.light .pages_nav .container .pages_ul ul li a {
+    color: black;
+}
+
+body.light .pages_footer {
+     background-color: #64a4ed;
+}
+
+body.light #themeToggle {
+    color: black;
+    border: black 1px solid;
+}
+
+body.light .main_hotel .page h2 {
+    color: #107BF7;
+}
+
+body.light .hotels_header .pages_nav {
+     background-color: #64a4ed;
+}
+
+body.dark {
+    background-color: #0B2C5F;
+    color: white;
+}
+
+body.dark .hotels_header .pages_nav {
+    background-color: #0b2244;
+}
+
+body.dark .pages_nav .container .pages_ul ul li a {
+    color: white;
+}
+
+body.dark #themeToggle {
+    color: white;
+    border: white 1px solid;
+}
+
+body.dark .license p a {
+    color: white;
+}
+
+body.dark .pages_footer {
+    background-color: #0b2244;
+}
+
+body.dark .pages_footer .container .footer_border {
+    border-bottom: 1px solid white;
+}
+
+body.dark .main_hotel .page h2 {
+    color: white;
+}
+
+body.dark .main_hotel .page h3 {
+    color: rgb(2, 2, 2);
+}

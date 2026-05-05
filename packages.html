@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Packages</title>
+    <link rel="stylesheet" href="all.min.css">
+    <link rel="stylesheet" href="packages.css">
+</head>
+
+<body>
+    <header class="packages_header">
+        <nav class="pages_nav">
+            <div class="container">
+                <div class="pages_logo">
+                    <div class="nav_logo">
+                        <img src="logo1-removebg-preview.png" id="nav_logo_img" alt="">
+                    </div>
+                    <div class="pages_themes">
+                        <i class="fa-solid fa-moon" id="themeToggle"></i>
+                    </div>
+                </div>
+                <div class="pages_ul">
+                    <ul>
+                        <li><a href="index.html">home</a></li>
+                        <li><a href="packages.html"> packages</a></li>
+                        <li><a href="dates.html"> dates</a></li>
+                        <li><a href="flights.html">flights</a></li>
+                        <li><a href="hotels.html">hotels</a></li>
+                        <li><a href="login.html">log in</a></li>
+                        <li><a href="signup.html">register</a></li>
+                        <li><a href="profile.html">profile</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+<h2 style="margin-top: 35px; text-align: center; font-size: 50px;">Packages</h2>
+    <section class="packages">
+        <div class="card">
+            <img src="photo-1501594907352-USA.jpg" alt="">
+            <div class="card_content">
+                <div class="card_text">
+                    <h2>USA</h2>
+                    <p>$2500 / person</p>
+                </div>
+                <div class="card_button">
+                    <button onclick="showDetails('Usa', 2500)">Details</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="photo-1467269204594-Germany.jpg" alt="">
+            <div class="card_content">
+                <div class="card_text">
+                    <h2>Germany</h2>
+                    <p>$2200 / person</p>
+                </div>
+                <div class="card_button">
+                    <button onclick="showDetails('Germany', 2200)">Details</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="egypt-header.jpg" alt="">
+            <div class="card_content">
+                <div class="card_text">
+                    <h2>Egypt</h2>
+                    <p>$1800 / person</p>
+                </div>
+                <div class="card_button">
+                    <button onclick="showDetails('Egypt', 1800)">Details</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="photo-1543783207-Spain.jpg" alt="">
+            <div class="card_content">
+                <div class="card_text">
+                    <h2>Spain</h2>
+                    <p>$2100 / person</p>
+                </div>
+                <div class="card_button">
+                    <button onclick="showDetails('Spain', 2100)">Details</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="photo-1483729558449-Brazil.jpg" alt="">
+            <div class="card_content">
+                <div class="card_text">
+                    <h2>Brazil</h2>
+                    <p>$2300 / person</p>
+                </div>
+                <div class="card_button">
+                    <button onclick="showDetails('Brazil', 2300)">Details</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="photo-1502602898657-France.jpg" alt="">
+            <div class="card_content">
+                <div class="card_text">
+                    <h2>France</h2>
+                    <p>$2400 / person</p>
+                </div>
+                <div class="card_button">
+                    <button onclick="showDetails('France', 2400)">Details</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="photo-1586724237569-Saudi Arabia.jpg" alt="">
+            <div class="card_content">
+                <div class="card_text">
+                    <h2>Saudi Arabia</h2>
+                    <p>$1600 / person</p>
+                </div>
+                <div class="card_button">
+                    <button onclick="showDetails('Saudi Arabia', 1600)">Details</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="photo-1525874684015-Italy.jpg" alt="">
+            <div class="card_content">
+                <div class="card_text">
+                    <h2>Italy</h2>
+                    <p>$2350 / person</p>
+                </div>
+                <div class="card_button">
+                    <button onclick="showDetails('Italy', 2350)">Details</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="photo-1555993539-greece.jpg" alt="">
+            <div class="card_content">
+                <div class="card_text">
+                    <h2>Greece</h2>
+                    <p>$2000 / person</p>
+                </div>
+                <div class="card_button">
+                    <button onclick="showDetails('Greece', 2000)">Details</button>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span onclick="closePopup()" class="close">&times;</span>
+            <h2 id="title" class="popup-title"></h2>
+            <p id="info" class="popup-text"></p>
+            <button class="submit-btn">Submit</button>
+        </div>
+    </div>
+
+    <footer class="pages_footer">
+        <div class="container">
+            <div class="footer_border">
+                <div class="pages_logo">
+                    <div class="footer_logo">
+                        <img src="logo1-removebg-preview.png" id="footer_logo_img" alt="">
+                    </div>
+
+                    <p>We are a team dedicated to building this website about aviation and aircraft. <br>
+                        <span> Our Team</span>
+                    </p>
+                </div>
+                <div class="footer_about">
+                    <h3>About</h3>
+                    <div class="links_list">
+                        <img src="imgmap.jpeg" usemap="#myMap">
+
+                        <map name="myMap">
+                            <area shape="rect" coords="80,0,500,30" href="flights.html">
+                            <area shape="rect" coords="60,40,115,60" href="hotels.html">
+                            <area shape="rect" coords="60,60,115,80" href="dates.html">
+                            <area shape="rect" coords="0,20,65,50" href="packages.html">
+                        </map>
+                    </div>
+                </div>
+                <div class="footer_contact">
+                    <h3>Contact</h3>
+                    <div class="footer_ul">
+                        <ul>
+                            <li><i class="fa-solid fa-location-dot"></i> Cairo International Airport</li>
+                            <li><i class="fa-solid fa-phone-flip"></i> Phone: +20 100 000 0000</li>
+                            <li><i class="fa-solid fa-envelope"></i> Email: info@airline.com</li>
+                            <li><i class="fa-brands fa-skype"></i> Skype: airline.support</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer_follow">
+                    <h3>Follow us</h3>
+                    <div class="footer_icons">
+                        <i class="fa-brands fa-facebook"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-brands fa-google-plus-g"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                        <i class="fa-brands fa-pinterest"></i>   </div>
+                      <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d61963477.1935999!2d-5.666757554845085!3d18.576269695502308!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sar!2seg!4v1777892214208!5m2!1sar!2seg"
+                        width="150" height="100" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                </div>
+            </div>
+        </div>
+         <div class="license">
+           <p>&copy2026 Designed by <a href="#">AirPlanes Team</a> - <a href="#">Final Project</a></p>
+        </div>
+    </footer>
+
+    <script src="packages.js"></script>
+</body>
+</html>

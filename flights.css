@@ -1,0 +1,398 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  transition: background 0.5s;
+
+}
+
+.flights_header .pages_nav {
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  height: 80px;
+}
+
+.flights_header .pages_nav .container {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.flights_header .pages_nav .container .pages_ul {
+  display: flex;
+  justify-content: space-around;
+  width: 70%;
+
+}
+
+.flights_header .pages_nav .container .pages_ul ul {
+  display: flex;
+  justify-content: space-around;
+  width: 90%;
+  list-style: none;
+}
+
+.flights_header .pages_nav .container .pages_ul ul li a {
+  color: black;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: all 0.5s;
+}
+
+.flights_header .pages_nav .container .pages_ul ul li a:hover {
+  color: #740E15;
+
+}
+
+.flights_header .pages_nav .container .pages_ul ul li {
+  transition: all 0.5s;
+}
+
+.flights_header .pages_nav .container .pages_ul ul li:hover {
+  transform: scale(1.1);
+  transform: translateY(-3px);
+}
+
+.flights_header .pages_nav .container .pages_logo {
+  width: 15%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 80px;
+}
+
+.flights_header .pages_nav .container .pages_logo .nav_logo,
+.flights_header .pages_nav .container .pages_logo .pages_themes {
+  width: 45%;
+}
+
+.flights_header .pages_nav .container .pages_logo .nav_logo img {
+  width: 100%;
+}
+
+.flights_header .pages_nav .container .pages_logo .pages_themes i {
+  padding: 5% 5%;
+  background: transparent;
+  color: black;
+  border-radius: 20%;
+}
+
+.route {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 30px 0;
+}
+
+
+.flights_nav {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 30px 0;
+}
+.flights_nav div {
+  font-size: 14px;
+  color: #555;
+  padding-bottom: 5px;
+}
+
+
+.flights_sec .container {
+  width: 85%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+  row-gap: 20px;
+
+}
+
+.flights_sec .container .card {
+  width: 32%;
+  border-radius: 5%;
+  background-color: white;
+  overflow: hidden;
+  height: 375px;
+   box-shadow:0 15px 30px rgba(5,5,5,5);
+  transition: 0.3s;
+  transform-origin: center;
+}
+.flights_sec .container .card:hover{
+   transform: scale(1.03);
+   z-index: 10;
+}
+.flights_sec .container .card .card_img {
+  border-radius: 5%;
+}
+
+.flights_sec .container .card .card_img img {
+  width: 100%;
+  height: 150px;
+
+}
+
+.flights_sec .container .card .card_content {
+  padding-inline: 15px;
+}
+
+.flights_sec .container .card .card_content h3 {
+  padding-top: 15px;
+}
+
+.flights_sec .container .card .card_content p {
+  padding-bottom: 5px;
+}
+
+.flights_sec .container .card .card_content h2 {
+  padding-block: 10px;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background: #0b2c5f;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.timeline {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 0;
+}
+.line {
+  flex: 1;
+  border-top: 2px dashed #b5c8e8;
+}
+
+.pages_footer {
+  margin-top: 100px;
+}
+
+.pages_footer .container {
+  width: 80%;
+  margin: auto;
+  height: 50vh;
+}
+
+.pages_footer .container .footer_border {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 100%;
+  align-content: center;
+  border-bottom: 1px solid black;
+}
+
+.pages_footer .container .footer_border .footer_about .links_list {
+  width: 100px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  column-gap: 20%;
+}
+
+.pages_footer .container .footer_border .footer_about h3 {
+  margin-left: 15%;
+}
+
+.pages_footer .container .footer_border .footer_about a {
+  color: black;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: all 0.5s;
+}
+
+.pages_footer .container .footer_border .footer_about a:hover {
+  color: #740E15;
+}
+
+.pages_footer .container .footer_border .pages_logo .footer_logo {
+  width: 50%;
+
+}
+
+.pages_footer .container .footer_border .pages_logo img {
+  width: 100%;
+}
+
+.pages_footer .container .footer_border .footer_contact ul {
+  list-style: none;
+}
+
+.pages_footer .container .footer_border .footer_contact,
+.pages_footer .container .footer_border .footer_follow,
+.footer_about,
+.pages_logo {
+  width: 20%;
+}
+
+.pages_footer .container .footer_border .footer_contact .footer_ul,
+.pages_footer .container .footer_border .footer_about .links_list,
+.pages_footer .container .footer_border .footer_follow .footer_icons {
+  margin-block: 5%;
+}
+
+.pages_footer .container .footer_border .footer_follow .footer_icons i {
+  transition: all 0.5s;
+}
+
+.pages_footer .container .footer_border .footer_follow .footer_icons i:hover {
+  color: #740E15;
+  cursor: pointer;
+}
+
+.pages_footer .container .footer_border .footer_about .links_list a,
+.pages_footer .container .footer_border .footer_contact .footer_ul li,
+.pages_footer .container .footer_border .pages_logo p {
+  line-height: 30px;
+}
+
+.pages_footer .container .footer_border .pages_logo p span {
+  border-bottom: 1px dashed #740E15;
+  ;
+  color: #740E15;
+
+}
+
+.pages_footer .license {
+  padding-block: 30px;
+  text-align: center;
+
+}
+
+.pages_footer .license p {
+  color: #686565;
+  font-family: sans-serif;
+  font-size: 13px;
+
+}
+
+.pages_footer .license p a {
+  text-decoration: none;
+  transition: all 0.7s;
+}
+
+.pages_footer .license p a:hover {
+  color: #740E15;
+  text-decoration: underline;
+}
+
+.fa-moon {
+  cursor: pointer;
+  border: #121212 1px solid;
+}
+
+body.light {
+  background-color: #b4d3f9;
+  color: black;
+
+}
+
+body.light .license p a {
+  color: black;
+}
+
+body.light .pages_footer .container .footer_border {
+  border-bottom: 1px solid black;
+}
+
+body.light .pages_nav .container .pages_ul ul li a {
+  color: black;
+}
+
+body.light .pages_footer {
+   background-color: #64a4ed;
+}
+
+body.light #themeToggle {
+  color: black;
+  border: black 1px solid;
+}
+
+body.light .main_hotel .page h2 {
+  color: #107BF7;
+}
+
+body.light .flights_header .pages_nav {
+   background-color: #64a4ed;
+}
+
+body.light .active-step {
+  border-bottom: 3px solid #0b2c5f;
+  font-weight: bold;
+  color: #0b2c5f !important;
+}
+
+body.dark {
+  background-color: #0B2C5F;
+}
+
+body.dark .flights_header .pages_nav {
+  background-color: #0b2244;
+}
+
+body.dark .pages_nav .container .pages_ul ul li a {
+  color: white;
+}
+
+body.dark #themeToggle {
+  color: white;
+  border: white 1px solid;
+}
+
+body.dark .license p a {
+  color: white;
+}
+
+body.dark .pages_footer {
+  background-color: #0b2244;
+}
+
+body.dark .pages_footer .container .footer_border {
+  border-bottom: 1px solid white;
+}
+
+body.dark .main_hotel .page h2 {
+  color: white;
+}
+
+body.dark .main_hotel .page h3 {
+  color: rgb(2, 2, 2);
+}
+body.dark .route{
+  color: white;
+}
+body.dark .flights_nav div {
+  color: white;
+}
+body.dark .flights_nav .active-step {
+  border-bottom: 3px solid white;
+  font-weight: bold;
+  color: white !important;
+}
+body.dark .pages_footer{
+  color: white;
+}
+body.dark .pages_footer h3,body.dark .pages_footer p{
+    color: white;
+}

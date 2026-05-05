@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home</title>
+    <link rel="stylesheet" href="all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="home_header">
+        <nav class="pages_nav">
+            <div class="container">
+                <div class="pages_logo">
+                    <div class="nav_logo">
+                        <img src="logo1-removebg-preview.png" id="nav_logo_img" alt="">
+                    </div>
+                    <div class="pages_themes">
+                        <i class="fa-solid fa-moon" id="themeToggle"></i>
+                    </div>
+                </div>
+                <div class="pages_ul">
+                    <ul>
+                        <li><a href="index.html">home</a></li>
+                        <li><a href="packages.html"> packages</a></li>
+                        <li><a href="dates.html"> dates</a></li>
+                        <li><a href="flights.html">flights</a></li>
+                        <li><a href="hotels.html">hotels</a></li>
+                        <li><a href="login.html">log in</a></li>
+                        <li><a href="signup.html">register</a></li>
+                        <li><a href="profile.html">profile</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="home_content">
+            <div class="container">
+                <h1><span>Choose</span> <br>your journey</h1>
+                <p>If you prefer a complete, ready-made travel package, please click the button below to explore our
+                    curated offers. <button class="home_button" onclick="goToPackagesPage()">click here</button> <br>
+                    Alternatively, you may customize your journey by selecting from the available options listed below
+                    to suit your preferences.</p>
+                <select name="countries_from" id="fromSelect">
+                    <option value="" disabled selected hidden>From</option>
+                    <option value="Egypt">Egypt</option>
+                    <option value="United Kingdom">United Kingdom</option>
+                    <option value="Germany">Germany</option>
+                    <option value="Usa">United States</option>
+                    <option value="Spain">Spain</option>
+                    <option value="Brazil">Brazil</option>
+                    <option value="France">France</option>
+                    <option value="Saudi Arabia">Saudi Arabia</option>
+                    <option value="Italy">Italy</option>
+                    <option value="Greece">Greece</option>
+                </select>
+                <select name="countries_to" id="toSelect">
+                    <option value="" disabled selected hidden>To</option>
+                    <option value="Egypt">Egypt</option>
+                    <option value="United Kingdom">United Kingdom</option>
+                    <option value="Germany">Germany</option>
+                    <option value="Usa">United States</option>
+                    <option value="Spain">Spain</option>
+                    <option value="Brazil">Brazil</option>
+                    <option value="France">France</option>
+                    <option value="Saudi Arabia">Saudi Arabia</option>
+                    <option value="Italy">Italy</option>
+                    <option value="Greece">Greece</option>
+                </select>
+                <button class="home_button" onclick="goToNextPage()">Go To Dates</button>
+            </div>
+        </div>
+    </header>
+    <footer class="pages_footer">
+        <div class="container">
+            <div class="footer_border">
+                <div class="pages_logo">
+                    <div class="footer_logo">
+                        <img src="logo1-removebg-preview.png" id="footer_logo_img" alt="">
+                    </div>
+                    <p>We are a team dedicated to building this website about aviation and aircraft. <br>
+                        <span> Our Team</span>
+                    </p>
+                </div>
+
+                <div class="footer_about">
+                    <h3>About</h3>
+                    <div class="links_list">
+                        <img src="imgmap.jpeg" usemap="#myMap">
+
+                        <map name="myMap">
+                            <area shape="rect" coords="80,0,500,30" href="flights.html">
+                            <area shape="rect" coords="60,40,115,60" href="hotels.html">
+                            <area shape="rect" coords="60,60,115,80" href="dates.html">
+                            <area shape="rect" coords="0,20,65,50" href="packages.html">
+                        </map>
+                    </div>
+                </div>
+                <div class="footer_contact">
+                    <h3>Contact</h3>
+                    <div class="footer_ul">
+                        <ul>
+                            <li><i class="fa-solid fa-location-dot"></i> Cairo International Airport</li>
+                            <li><i class="fa-solid fa-phone-flip"></i> Phone: +20 100 000 0000</li>
+                            <li><i class="fa-solid fa-envelope"></i> Email: info@airline.com</li>
+                            <li><i class="fa-brands fa-skype"></i> Skype: airline.support</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer_follow">
+                    <h3>Follow us</h3>
+                    <div class="footer_icons">
+                        <i class="fa-brands fa-facebook"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-brands fa-google-plus-g"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                        <i class="fa-brands fa-pinterest"></i>
+                    </div>
+                      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d61963477.1935999!2d-5.666757554845085!3d18.576269695502308!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sar!2seg!4v1777892214208!5m2!1sar!2seg" width="150" height="100" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="license">
+            <p>&copy2026 Designed by <a href="#">AirPlanes Team</a> - <a href="#">Final Project</a></p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
